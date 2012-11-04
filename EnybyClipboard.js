@@ -42,7 +42,7 @@
         };
 
         this.pasteText = function (callback) {
-            var div = ;
+            var div = null;
             if (!div) {
                 div = new Element('textarea', {'id' : 'special_paste', 'style': 'opacity: 0;position: absolute;top: -10000px;right: 0;'});
                 div.injectInside(document.body);
