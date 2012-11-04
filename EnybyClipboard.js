@@ -14,7 +14,7 @@
         };
 
         this.copyText = function (text) {
-            var div = ;
+            var div = null;
             if (!div) {
                 div = new Element('pre', {'id' : 'special_copy', 'style': 'opacity: 0;position: absolute;top: -10000px;right: 0;'});
                 div.injectInside(document.body);
