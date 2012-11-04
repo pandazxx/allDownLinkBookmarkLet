@@ -14,7 +14,7 @@
         };
 
         this.copyText = function (text) {
-            var div = $('special_copy');
+            var div = document.id('special_copy');
             if (!div) {
                 div = new Element('pre', {'id' : 'special_copy', 'style': 'opacity: 0;position: absolute;top: -10000px;right: 0;'});
                 div.injectInside(document.body);
@@ -42,13 +42,13 @@
         };
 
         this.pasteText = function (callback) {
-            var div = $('special_paste');
+            var div = document.id('special_paste');
             if (!div) {
                 div = new Element('textarea', {'id' : 'special_paste', 'style': 'opacity: 0;position: absolute;top: -10000px;right: 0;'});
                 div.injectInside(document.body);
                 div.addEvent('keyup', function() {
                     if (this.callback) {
-                        this.pastedText = $('special_paste').get('value');
+                        this.pastedText = document.id('special_paste').get('value');
                         this.callback.call(this.pastedText);
                         this.callback = false;
                         this.pastedText = false;
