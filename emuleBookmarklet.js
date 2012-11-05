@@ -16,7 +16,7 @@ javascript:(function(){
     document.getElementsByTagName('head')[0].appendChild(y);
     */
 
-    var d = jQuery('<div id="emuleBookmarkLetDiv" style="border: 6px solid rgb(180, 180, 180); margin: 0px; padding: 0px; position: fixed; background-color: white;OVERFLOW-Y:scroll; z-index: 999; width: 500px; top: 6px; right: 6px;"></div>');
+    var d = jQuery('<div id="emuleBookmarkLetDiv" style="border: 6px solid rgb(180, 180, 180); margin: 0px; padding: 0px; position: fixed; background-color: white;OVERFLOW-Y:scroll; z-index: 100000; width: 500px; height:500px; top: 6px; right: 6px;"></div>');
     /*d.prop('style', 'border: 6px solid rgb(180, 180, 180); margin: 0px; padding: 0px; position: fixed; background-color: white; z-index: 0; width: 500px; height: 370px;  top: 6px; right: 6px;');*/
     d.appendTo(jQuery('body'));
     var clipText = "";
@@ -61,7 +61,7 @@ javascript:(function(){
     copyBtn.click(function() {
         var content = "";
         d.find('input.emulelink:checked').each(function() {
-            content += $(this).val() + "<br/>";
+            content += $(this).val() + "\n";
         });
         alert(content);
     });
